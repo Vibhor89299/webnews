@@ -22,13 +22,12 @@ Route::get('post', 'App\Http\Controllers\frontController@post');
 
 Route::get('admin', 'App\Http\Controllers\adminController@index');
 
-
+//Category 
 Route::get('viewcategory', 'App\Http\Controllers\adminController@viewCategory');
-
 Route::post('addcategory','App\Http\Controllers\crudController@insertData');
-
 Route::get('editcategory/{id}' , 'App\Http\Controllers\adminController@editcategory');
-
 Route::post('editcategory/{id}','App\Http\Controllers\crudController@updateData');
-
 Route::post('multipledelete', 'App\Http\Controllers\adminController@multipleDelete');
+
+//Settings
+Route::get('settings','App\Http\Controllers\adminController@settings');

@@ -74,6 +74,14 @@
             </ul>
         </li>
         <li class="treeview">
+            <a href="{{url('settings')}}">
+              <i class="fa fa-bar-gear"></i> <span>Settings</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+        </li>
+        <li class="treeview">
             <a href="#">
               <i class="fa fa-user-plus"></i> <span>Users</span>
               <span class="pull-right-container">

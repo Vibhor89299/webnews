@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Request as Input;
 use DB;
+use Illuminate\Support\Facades\DB as FacadesDB;
 use Session;
 
 class adminController extends Controller
@@ -46,6 +47,11 @@ class adminController extends Controller
          session::flash('message' , 'Data deleted sucessfully');      
          return redirect()->back();
 
+     }
+
+     public function settings(){
+      $data= DB::table('settings')->first();
+      return view ('Dashboard.settings',['data'=>$data]);
      }
 
 }
