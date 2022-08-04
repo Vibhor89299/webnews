@@ -31,3 +31,5 @@ Route::post('multipledelete', 'App\Http\Controllers\adminController@multipleDele
 
 //Settings
 Route::get('settings','App\Http\Controllers\adminController@settings');
+Route::post('addsettings','App\Http\Controllers\crudController@insertData');
+Route::post('updatesettings','App\Http\Controllers\crudController@updateData');

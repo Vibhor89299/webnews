@@ -41,6 +41,6 @@ $(document).ready(function(){
 	});
 
 	var list = document.getElementById("my-ui-list");
-	Sortable.create(list);
+		Sortable.create(list);
 
-});
+});	

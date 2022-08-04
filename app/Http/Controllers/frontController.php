@@ -10,9 +10,25 @@ use Illuminate\Http\Request;
    public function __construct()
    {
     $categories= DB::table('categories')->where('status','on')->get();
+    $settings = DB::table('settings')->first();
+    if($settings){
+        $settings->social = explode(',' , $settings->social);
+        foreach($settings->social as $social){
+            $icon = explode('.' , $social) ;
+            $icon= $icon[1];
+            $icons[] = $icon ;
+        }
+    }
+    else{
+        $icons =[];
+    }
+
     view()->share([
         'categories' => $categories,
+        'settings' =>  $settings,
+        'icons' => $icons,
     ]);
+    
    }
    
    

@@ -51,6 +51,10 @@ class adminController extends Controller
 
      public function settings(){
       $data= DB::table('settings')->first();
+      if($data){
+         $data->social= explode(',' , $data->social);
+         
+      }
       return view ('Dashboard.settings',['data'=>$data]);
      }
 
