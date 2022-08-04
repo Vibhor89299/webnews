@@ -55,7 +55,7 @@ class adminController extends Controller
          $data->social= explode(',' , $data->social);
          
       }
-      return view ('Dashboard.settings',['data'=>$data]);
+            return  view('Dashboard.settings', ['data'=>$data] );
      }
 
 }
